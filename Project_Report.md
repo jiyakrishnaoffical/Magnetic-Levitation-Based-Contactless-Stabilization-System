@@ -10,8 +10,8 @@ This technology is cornerstone to modern high-tech industries:
 - **Pharmaceuticals:** Contactless fluid mixing and frictionless blood pumping, preventing component damage or localized heating.
 - **Precision Engineering:** Active magnetic bearings in ultra-high-speed turbines and flywheels safely spinning in vacuums.
 
-### The "Anti-Gravity" Simulation
-Gravity continuously applies a downward force on the mass. The system simulates "anti-gravity" by perfectly generating an opposing upward magnetic force. Because the forces equal out, the net force is zero and the object floats flawlessly mid-air.
+### The Simulation
+Gravity continuously applies a downward force on the mass. The system perfectly generates an opposing upward magnetic force. Because the forces equal out, the net force is zero and the object floats flawlessly mid-air.
 
 ---
 

@@ -1,6 +1,6 @@
 <div align="center">
   <h1>🧲 Magnetic Levitation Contactless Stabilization System</h1>
-  <p><i>An industrial-grade prototype demonstrating autonomous "anti-gravity" stabilization through PID control and electro-magnetic forces.</i></p>
+  <p><i>An industrial-grade prototype demonstrating autonomous stabilization through PID control and electro-magnetic forces.</i></p>
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
   [![Platform](https://img.shields.io/badge/Platform-Arduino-00979C.svg)](https://www.arduino.cc/)
@@ -10,7 +10,7 @@
 <br/>
 
 ## 📖 Project Description
-This repository contains a full hardware and software implementation of a closed-loop electromagnetic active suspension unit. By relying exclusively on magnetic fields mathematically balanced out thousands of times per second, the system sustains heavy objects perfectly stationary in mid-air. It simulates "anti-gravity" by directly counteracting 9.8m/s² downward acceleration precisely according to active sensor feedback.
+This repository contains a full hardware and software implementation of a closed-loop electromagnetic active suspension unit. By relying exclusively on magnetic fields mathematically balanced out thousands of times per second, the system sustains heavy objects perfectly stationary in mid-air. It operates by directly counteracting 9.8m/s² downward acceleration precisely according to active sensor feedback.
 
 ## 🎯 Demo & Working Principle
 According to Earnshaw's theorem, static, unmodified magnetic fields cannot achieve stable levitation due to inherent instability. Without intervention, an object will violently snap towards the magnet or immediately fall away. 
