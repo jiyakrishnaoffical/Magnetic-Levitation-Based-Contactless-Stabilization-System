@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home IoT Dashboard</title>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Charts.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Socket.IO -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar">
+                <div class="logo">
+                    <img src="https://via.placeholder.com/50" alt="Logo">
+                    <h2>IoT<span class="danger">Dashboard</span></h2>
+                </div>
+                <div class="sidebar-items">
+                    <a href="#" class="active">
+                        <span class="material-icons">dashboard</span>
+                        <h3>Dashboard</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons">devices</span>
+                        <h3>Devices</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons">analytics</span>
+                        <h3>Analytics</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons">settings</span>
+                        <h3>Settings</h3>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <div class="header">
+                <h1>Dashboard</h1>
+                <div class="connection-status">
+                    <div id="mqtt-status" class="status-badge">
+                        <span class="material-icons">cloud</span>
+                        <span class="status-text">MQTT: Connecting...</span>
+                    </div>
+                    <div id="wifi-status" class="status-badge">
+                        <span class="material-icons">wifi</span>
+                        <span class="status-text">WiFi: Checking...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sensor Cards -->
+            <div class="sensor-cards">
+                <div class="card temperature">
+                    <div class="card-icon">
+                        <span class="material-icons">thermostat</span>
+                    </div>
+                    <div class="card-info">
+                        <h2>Temperature</h2>
+                        <div class="reading">
+                            <span id="temperature">--.-</span>
+                            <span class="unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="trend">
+                        <span id="temp-trend" class="material-icons">trending_up</span>
+                    </div>
+                </div>
+
+                <div class="card humidity">
+                    <div class="card-icon">
+                        <span class="material-icons">water_drop</span>
+                    </div>
+                    <div class="card-info">
+                        <h2>Humidity</h2>
+                        <div class="reading">
+                            <span id="humidity">--.-</span>
+                            <span class="unit">%</span>
+                        </div>
+                    </div>
+                    <div class="trend">
+                        <span id="hum-trend" class="material-icons">trending_down</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts">
+                <div class="chart-container">
+                    <h2>Temperature History</h2>
+                    <canvas id="tempChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h2>Humidity History</h2>
+                    <canvas id="humChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Device Info -->
+            <div class="device-info">
+                <div class="card">
+                    <h2>Device Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="material-icons">router</span>
+                            <div>
+                                <h3>IP Address</h3>
+                                <p id="ip-address">---.---.---.---</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="material-icons">schedule</span>
+                            <div>
+                                <h3>Last Update</h3>
+                                <p id="last-update">Never</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

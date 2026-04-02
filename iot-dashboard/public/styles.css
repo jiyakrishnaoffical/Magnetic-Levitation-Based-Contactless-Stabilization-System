@@ -1,0 +1,43 @@
+/* Custom styles */
+.connection-status {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.badge {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.current-readings {
+    margin-top: 2rem;
+}
+
+.reading-item {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reading-label {
+    font-weight: bold;
+    min-width: 120px;
+}
+
+.reading-value {
+    font-size: 1.5rem;
+    font-family: monospace;
+    color: #2c3e50;
+}
+
+.reading-unit {
+    color: #7f8c8d;
+}
+
+#sensorChart {
+    width: 100%;
+    height: 300px;
+}
